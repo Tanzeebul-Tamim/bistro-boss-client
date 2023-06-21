@@ -1,0 +1,7 @@
+#Basic security layer:
+1. Don't show the link to those who should't see it. Only show to the types of users who should see it.
+2. Don't allow to visit the route by typing the route name on the url. Use AdminRoute that will check whether the user is admin or not. If the user is not an admin then redirect the user to any other page. You can logout the user and send them to the login page as well.
+
+#To send data:
+1. Verify jwt token. Send authorization token in the header to the server. If possible use axios to send jwt token by intercepting the request.
+2. If it is an admin activity, make sure only admin user is posting data by using verifyAdmin
